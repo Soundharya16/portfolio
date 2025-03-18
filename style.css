@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+nav{
+    width: 100%;
+    position: sticky !important;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.5);
+    z-index: 10;
+}
+.fa-instagram{
+    text size: 50px;
+}
+.navbar-brand{
+    font-weight: 600;
+
+}
+.nav-link{
+    color: white !important;
+    border-bottom: 1px solid transparent;
+}
+.nav-link:hover{
+    border-bottom: 1px  solid white;
+
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+/*home section*/
+#home{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+#home p{
+    position: absolute;
+    top: 50%;
+    font-size: 100px;
+    opacity: 0;
+    animation: text 3s ease-in-out;
+}
+#home button a{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    background-color: antiquewhite;
+} 
+
+#home p:nth-child(1)
+{
+    animation-delay: 0s;
+}
+#home p:nth-child(2){
+    animation-delay: 3s;
+}
+#home p:nth-child(3){
+    animation-delay: 6s;
+}
+#home p:nth-child(4){
+    animation-delay: 9s;
+}
+@keyframes text{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#home span{
+    color: yellow;
+}
+@media screen and (max-width:576px){
+    #home p{
+        font-size: 80px;
+    }
+    #home button a{
+        position: absolute;
+        top: 100%;
+        left: 70%;
+        background-color: antiquewhite;
+    } 
+}
+/* about section */
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(10, 6, 9);
+    
+}
+.circle{
+    width: 400px;
+    height: 400px;
+    background: rgb(171, 222, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, .7);
+    margin-bottom: 3%;
+    margin-top: 8%;
+    transition: 1s;
+}
+.circle img{
+    position: absolute;
+    height: 400px;
+    top: -2%;
+    left: 20%;
+    right: -20%;
+    border-radius: 50%;
+    filter: drop-shadow(1px 30px 50px rgba(237, 236, 238, 0.5));
+    transition: 1s;
+    
+}
+.circle:hover{
+width: 500px;
+height: 500px;
+border-radius: 10px;
+transition: 1s;
+}
+.circle:hover img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 1s;
+}
+.circle:hover .content{
+    position: absolute;
+    top: 15%;
+    right: 0;
+    color: rgb(14, 13, 13);
+    width: 50%;
+    opacity: 1;
+    transition: 1s;
+}
+.circle .content{
+    opacity: 0;
+}
+@media  screen and (max-width:576px) {
+    .circle{
+        width: 400px;
+        height: 400px;
+        background: rgb(162, 199, 241);
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, .7);
+        margin-bottom: 3%;
+        margin-top: 8%;
+        transition: 1s;
+    }  
+    .circle:hover img{
+        position: absolute;
+        top: 0%;
+        left: 8%;
+        transition: 1s;
+    }
+    .circle:hover{
+        width: 400px;
+        height: 700px;
+        border-radius: 10px;
+        transition: 1s;
+        }
+        .circle:hover .content{
+            position: absolute;
+            top: 60%;
+            right: 0;
+            color: rgb(14, 13, 13);
+            padding: 15px;
+            width: 100%;
+            opacity: 1;
+            transition: 1s;
+        }
+        .circle .content{
+            opacity: 0;
+        }
+}
+/* skill section */
+#skills{
+    padding-top: 5%;
+    background-color: black;
+}
+#skills .container{
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+label{
+    font-size: 20px;
+    color: white;
+}
+.progress{
+    height: 30px !important;
+    box-shadow: 2px 4px 5px white, -2px -2px 5px white;
+}
+.progress:hover{
+    box-shadow: 2px 4px 5px grey, -2px -2px 5px grey;
+}
+#skills .text-center{
+    color: white;
+}
+/* Project section */
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    background: linear-gradient(10deg, rgb(7, 7, 7),black);
+}
+.carousel{
+    width: 80%;
+    height: 80vh;
+    box-shadow: 10px 20px 10px rgba(0,0,0,0.4);
+}
+iframe{
+    width: 100%;
+    height: 80vh;
+}
+@media  screen and (max-width:576px) {
+.carousel{
+    width: 90%;
+    height: 50vh;
+    box-shadow: 10px 20px 10px rgba(0,0,0,0.4);
+}   
+iframe{
+    width: 100%;
+    height: 50vh;
+}
+}
+
+
+/* contact section */
+#contact{
+ padding-top: 7%;
+ background-color: black;
+}
+#contact iframe{
+    box-shadow: 15px 20px 10px rgba(0,0,0,0.4);
+}
